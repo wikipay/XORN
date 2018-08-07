@@ -53,20 +53,20 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("0x0000084b0f88638c96ed44e13658f9fc8a4f5fd6f2d5f777e4b5473e5b387437"));
+    boost::assign::map_list_of(0, uint256("0x0000098c5076fe097ce914e95e25de09873bfbd1fdbbb8bd120448f1206dcc99"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1533592801, // * UNIX timestamp of last checkpoint block
+    1533670200, // * UNIX timestamp of last checkpoint block
     1,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
-    boost::assign::map_list_of(0, uint256("0x0000097e599cd92bee5a73defcbcf446caa841b098537c8c58c59a3f8bb23215"));
+    boost::assign::map_list_of(0, uint256("0x00000595cd2578a0a7590896f55c6277e77dc9326575751a3a5ae2582f267d81"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1533592802,
+    1533670202,
     0,
     250};
 
@@ -74,7 +74,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1533592803,
+    1533670204,
     0,
     100};
 
@@ -99,10 +99,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x21;
-        pchMessageStart[1] = 0xa4;
-        pchMessageStart[2] = 0xbd;
-        pchMessageStart[3] = 0xa9;
+        pchMessageStart[0] = 0x35;
+        pchMessageStart[1] = 0x2c;
+        pchMessageStart[2] = 0xb1;
+        pchMessageStart[3] = 0xa2;
         vAlertPubKey = ParseHex("0433a2dc8cf9d5a2e109f84811c0df9d0cb0b1b6994d9b923549f94dc0968d209fc3c0c67303955b8c3275fc92d51ce31226f1e32970c28733a53c00b1a1604c6c");
         nDefaultPort = 12311;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // XORN starting difficulty is 1 / 2^12
@@ -225,10 +225,10 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x45;
-        pchMessageStart[1] = 0x76;
-        pchMessageStart[2] = 0x65;
-        pchMessageStart[3] = 0xba;
+        pchMessageStart[0] = 0x54;
+        pchMessageStart[1] = 0x67;
+        pchMessageStart[2] = 0x56;
+        pchMessageStart[3] = 0xab;
         vAlertPubKey = ParseHex("04ea71b8e963157d6037455f3109bdab4272ac80d204c4a400a23a0846e9f0341252ae136e941210c3b323362b498c1c4cc7c3b95294cccfedede3ee9444c248d4");
         nDefaultPort = 51400;
         nEnforceBlockUpgradeMajority = 51;
